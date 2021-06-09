@@ -34,6 +34,7 @@ namechg(){
 inst(){
 	hdiutil mount RageKiosk.dmg
 	cp -rvf "/Volumes/RageKiosk/RageKiosk.app" /Applications/
+	open /Applications/RageKiosk.app
 }
 
 remve(){

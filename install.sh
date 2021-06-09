@@ -1,7 +1,10 @@
 #!/bin/bash
 
 apt="RageKiosk"
-
+bold=$(tput bold)
+normal=$(tput sgr0)
+red='\e[1;31m'
+end='\e[0m'
 chk(){
     if [ -d "/Applications/$apt.app" ]; then
         rm -rf "/Applications/RageKiosk.app/"
@@ -40,8 +43,21 @@ remve(){
     rm -rf $SCRIPT_DIR
 }
 
-chk
-down_pack
-namechg
-inst
-remve
+ins(){
+	clear
+	if [ `whoami` != root ]; then
+		printf "Please Run This Scripts As ${bold}${red}root${end}${normal} Or As ${bold}${red}Sudo User ${end}${normal}\n\n"
+        exit
+	else
+
+		chk
+		down_pack
+		namechg
+		inst
+		remve
+
+	fi
+
+}
+
+ins

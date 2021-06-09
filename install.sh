@@ -47,7 +47,7 @@ remve(){
 ins(){
 	clear
 	if [ `whoami` != root ]; then
-		printf "Please Run This Scripts As ${bold}${red}root${end}${normal} Or As ${bold}${red}Sudo User ${end}${normal}\n\n"
+		printf "Please Run This Scripts As ${bold}${red}Root${end}${normal} Or As ${bold}${red}Sudo User ${end}${normal}\n\n"
         exit
 	else
 
